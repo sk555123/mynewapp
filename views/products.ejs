@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<style>
+
+table, th, td {
+  color: whitesmoke;
+  border: 1px transparent;
+  border-collapse: collapse;
+  text-align: center;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+body {
+  background-image: url('./images/pexels-sebastiaan-stam-1097456.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+a:link {
+  color: whitesmoke;
+  background-color: transparent;
+  text-decoration: none;
+}
+</style>
+</head>
+
+
+
+<body>
+
+
+<table style="width:10%;color: whitesmoke;">
+<tr>
+  <th><a href= "home" style="text-align:center;"> home </a></th>
+  <th><a href="products" style="text-align:center;"> products </a></th>
+  <th><a href="api" style="text-align:center;"> API </a></th>
+</tr>
+</table>
+
+
+
+<h1 style="font-family:courier;text-align:center;color: whitesmoke;">Welcome to SY's site - part 2</h1>
+<h2 style="font-family:courier;text-align:center;color: whitesmoke;">Demo site</h2>
+
+<h3 style="font-family:courier;text-align:left;color: whitesmoke;"> <u>Product list:</u></h3>
+
+
+<%bloglist.forEach(blogs => {%>
+  <p style="color:whitesmoke"> <b>---</b></p>
+  <p style="color:whitesmoke">Product ID: <%=blogs.id%></p>
+   <p style="color:whitesmoke">Product name: <%=blogs.product_name%></p>
+   <p style="color:whitesmoke">Product description: <%=blogs.desc%></p>
+   <p style="color:whitesmoke">Product price: <%=blogs.price%></p>
+   <p style="color:whitesmoke">Upload date: <%=blogs.createdAt%></p>
+<%})%>
+
+
+
+  <p style="font-family:courier;color: whitesmoke;text-align: center;"><b> please do not crush this site</b></p>
+
+
+</body>
+</html>
+
+
